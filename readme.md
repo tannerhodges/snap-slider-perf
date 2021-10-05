@@ -35,7 +35,7 @@ Breakdown:
 | **Speed Index**              | Slick          | Tiny Slider 2 | Snap Slider   | (See above.) |
 | **Cumulative Layout Shift**  | -              | -             | -             | No libraries produced significant layout shifts. |
 | **Total Blocking Time**      | Snap Slider    | Flickity      | Tiny Slider 2 | Libraries with more DOM manipulation had more blocking time. |
-| **Document Complete**        | Snap Slider    | Flickity      | Swiper        | In general, libraries with the least blocking time also finished loaded first. (Fully Loaded follows same order.) |
+| **Document Complete**        | Snap Slider    | Flickity      | Swiper        | In general, libraries with the least blocking time also finished loading first. (Fully Loaded follows same order.) |
 | **Bytes In**                 | Snap Slider    | Tiny Slider 2 | Flickity      | Libraries with the least blocking time also happened to be the lowest file size overall. |
 
 ### WebPageTest Runs
