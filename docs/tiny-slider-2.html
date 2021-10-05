@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiny Slider 2 | Snap Slider Performance Tests</title>
+
+  <!-- Based on https://github.com/ganlanyuan/tiny-slider#install -->
+
+  <!-- Styles -->
+  <style>
+    /* https://unpkg.com/tiny-slider@2.9.3/dist/tiny-slider.css */
+    .tns-outer{padding:0 !important}.tns-outer [hidden]{display:none !important}.tns-outer [aria-controls],.tns-outer [data-action]{cursor:pointer}.tns-slider{-webkit-transition:all 0s;-moz-transition:all 0s;transition:all 0s}.tns-slider>.tns-item{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.tns-horizontal.tns-subpixel{white-space:nowrap}.tns-horizontal.tns-subpixel>.tns-item{display:inline-block;vertical-align:top;white-space:normal}.tns-horizontal.tns-no-subpixel:after{content:'';display:table;clear:both}.tns-horizontal.tns-no-subpixel>.tns-item{float:left}.tns-horizontal.tns-carousel.tns-no-subpixel>.tns-item{margin-right:-100%}.tns-no-calc{position:relative;left:0}.tns-gallery{position:relative;left:0;min-height:1px}.tns-gallery>.tns-item{position:absolute;left:-100%;-webkit-transition:transform 0s, opacity 0s;-moz-transition:transform 0s, opacity 0s;transition:transform 0s, opacity 0s}.tns-gallery>.tns-slide-active{position:relative;left:auto !important}.tns-gallery>.tns-moving{-webkit-transition:all 0.25s;-moz-transition:all 0.25s;transition:all 0.25s}.tns-autowidth{display:inline-block}.tns-lazy-img{-webkit-transition:opacity 0.6s;-moz-transition:opacity 0.6s;transition:opacity 0.6s;opacity:0.6}.tns-lazy-img.tns-complete{opacity:1}.tns-ah{-webkit-transition:height 0s;-moz-transition:height 0s;transition:height 0s}.tns-ovh{overflow:hidden}.tns-visually-hidden{position:absolute;left:-10000em}.tns-transparent{opacity:0;visibility:hidden}.tns-fadeIn{opacity:1;filter:alpha(opacity=100);z-index:0}.tns-normal,.tns-fadeOut{opacity:0;filter:alpha(opacity=0);z-index:-1}.tns-vpfix{white-space:nowrap}.tns-vpfix>div,.tns-vpfix>li{display:inline-block}.tns-t-subp2{margin:0 auto;width:310px;position:relative;height:10px;overflow:hidden}.tns-t-ct{width:2333.3333333%;width:-webkit-calc(100% * 70 / 3);width:-moz-calc(100% * 70 / 3);width:calc(100% * 70 / 3);position:absolute;right:0}.tns-t-ct:after{content:'';display:table;clear:both}.tns-t-ct>div{width:1.4285714%;width:-webkit-calc(100% / 70);width:-moz-calc(100% / 70);width:calc(100% / 70);height:10px;float:left}
+  </style>
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    .slider-wrapper {
+      max-width: 600px;
+      height: 300px;
+      margin: 0 auto 100px;
+      background: lightgray;
+    }
+
+    .slider-wrapper .tns-outer {
+      display: grid;
+      position: relative;
+      justify-items: center;
+    }
+
+    .slider-wrapper .tns-ovh {
+      width: 100%;
+    }
+
+    .slider-wrapper .tns-controls [data-controls="prev"],
+    .slider-wrapper .tns-controls [data-controls="next"] {
+      display: flex;
+      z-index: 10;
+      position: absolute;
+      top: 50%;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border: 0;
+      border-radius: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+    .slider-wrapper .tns-controls [data-controls="prev"] {
+      left: 10px;
+    }
+
+    .slider-wrapper .tns-controls [data-controls="next"] {
+      right: 10px;
+    }
+
+    .slider-wrapper .tns-nav {
+      order: 1;
+    }
+
+    .slider-slide {
+      display: inline-grid !important;
+      place-content: center;
+      width: 100%;
+      height: 300px;
+    }
+  </style>
+
+  <!-- Scripts -->
+  <script defer src="https://unpkg.com/tiny-slider@2.9.3/dist/min/tiny-slider.js"></script>
+  <script type="module">
+    [...document.querySelectorAll('.slider')].forEach((el) => tns({
+      container: el,
+      items: 1,
+    }))
+  </script>
+</head>
+<body>
+  <main>
+    <h1>Tiny Slider 2 Demo</h1>
+
+    <div class="slider-wrapper"><div class="slider"><div class="slider-slide">Slide 1</div><div class="slider-slide">Slide 2</div><div class="slider-slide">Slide 3</div><div class="slider-slide">Slide 4</div><div class="slider-slide">Slide 5</div><div class="slider-slide">Slide 6</div><div class="slider-slide">Slide 7</div></div></div>
+    <div class="slider-wrapper"><div class="slider"><div class="slider-slide">Slide 1</div><div class="slider-slide">Slide 2</div><div class="slider-slide">Slide 3</div><div class="slider-slide">Slide 4</div><div class="slider-slide">Slide 5</div><div class="slider-slide">Slide 6</div><div class="slider-slide">Slide 7</div></div></div>
+    <div class="slider-wrapper"><div class="slider"><div class="slider-slide">Slide 1</div><div class="slider-slide">Slide 2</div><div class="slider-slide">Slide 3</div><div class="slider-slide">Slide 4</div><div class="slider-slide">Slide 5</div><div class="slider-slide">Slide 6</div><div class="slider-slide">Slide 7</div></div></div>
+    <div class="slider-wrapper"><div class="slider"><div class="slider-slide">Slide 1</div><div class="slider-slide">Slide 2</div><div class="slider-slide">Slide 3</div><div class="slider-slide">Slide 4</div><div class="slider-slide">Slide 5</div><div class="slider-slide">Slide 6</div><div class="slider-slide">Slide 7</div></div></div>
+    <div class="slider-wrapper"><div class="slider"><div class="slider-slide">Slide 1</div><div class="slider-slide">Slide 2</div><div class="slider-slide">Slide 3</div><div class="slider-slide">Slide 4</div><div class="slider-slide">Slide 5</div><div class="slider-slide">Slide 6</div><div class="slider-slide">Slide 7</div></div></div>
+    <div class="slider-wrapper"><div class="slider"><div class="slider-slide">Slide 1</div><div class="slider-slide">Slide 2</div><div class="slider-slide">Slide 3</div><div class="slider-slide">Slide 4</div><div class="slider-slide">Slide 5</div><div class="slider-slide">Slide 6</div><div class="slider-slide">Slide 7</div></div></div>
+    <div class="slider-wrapper"><div class="slider"><div class="slider-slide">Slide 1</div><div class="slider-slide">Slide 2</div><div class="slider-slide">Slide 3</div><div class="slider-slide">Slide 4</div><div class="slider-slide">Slide 5</div><div class="slider-slide">Slide 6</div><div class="slider-slide">Slide 7</div></div></div>
+    <div class="slider-wrapper"><div class="slider"><div class="slider-slide">Slide 1</div><div class="slider-slide">Slide 2</div><div class="slider-slide">Slide 3</div><div class="slider-slide">Slide 4</div><div class="slider-slide">Slide 5</div><div class="slider-slide">Slide 6</div><div class="slider-slide">Slide 7</div></div></div>
+    <div class="slider-wrapper"><div class="slider"><div class="slider-slide">Slide 1</div><div class="slider-slide">Slide 2</div><div class="slider-slide">Slide 3</div><div class="slider-slide">Slide 4</div><div class="slider-slide">Slide 5</div><div class="slider-slide">Slide 6</div><div class="slider-slide">Slide 7</div></div></div>
+    <div class="slider-wrapper"><div class="slider"><div class="slider-slide">Slide 1</div><div class="slider-slide">Slide 2</div><div class="slider-slide">Slide 3</div><div class="slider-slide">Slide 4</div><div class="slider-slide">Slide 5</div><div class="slider-slide">Slide 6</div><div class="slider-slide">Slide 7</div></div></div>
+  </main>
+</body>
+</html>
