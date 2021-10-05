@@ -10,7 +10,7 @@ Comparing [Snap Slider](https://github.com/tannerhodges/snap-slider#readme) to o
 
 See all demos in the `docs/` folder:
 
-- [flickity.html](./docs/flickity.html)
-- [slick.html](./docs/slick.html)
-- [snap-slider.html](./docs/snap-slider.html)
-- [swiper.html](./docs/swiper.html)
+- [flickity.html](https://tannerhodges.github.io/snap-slider-perf/flickity.html)
+- [slick.html](https://tannerhodges.github.io/snap-slider-perf/slick.html)
+- [snap-slider.html](https://tannerhodges.github.io/snap-slider-perf/snap-slider.html)
+- [swiper.html](https://tannerhodges.github.io/snap-slider-perf/swiper.html)
