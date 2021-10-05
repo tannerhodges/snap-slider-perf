@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swiper | Snap Slider Performance Tests</title>
+
+  <!-- Based on https://swiperjs.com/get-started -->
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    .swiper {
+      max-width: 600px;
+      height: 300px;
+      background: lightgray;
+    }
+
+    .swiper-slide {
+      display: grid;
+      place-content: center;
+    }
+  </style>
+
+  <!-- Scripts -->
+  <script type="module" src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script type="module">
+    const swiper = new Swiper('.swiper', {
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</head>
+<body>
+  <main>
+    <h1>Swiper Demo</h1>
+
+    <!-- Container -->
+    <div class="swiper">
+      <!-- Wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+        <div class="swiper-slide">Slide 7</div>
+      </div>
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Nav -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </main>
+</body>
+</html>
