@@ -42,11 +42,11 @@ Breakdown:
 
 Here are the sample WebPageTest runs that each demo's results were taken from. Each demo was tested in Chrome on a Moto G4 with a 3GFast connection in Virginia. Results are based on the median run of 9 total runs per demo.
 
-- Flickity: https://webpagetest.org/result/211005_AiDcX6_c40d791a656bed8393de2597e404c0dc/#run3
+- Flickity: https://webpagetest.org/result/211005_AiDcX6_c40d791a656bed8393de2597e404c0dc/
 - Owl Carousel 2: https://webpagetest.org/result/211005_AiDc8H_d304a765f0baa836a42afd50503f4469/
-- Slick: https://webpagetest.org/result/211005_AiDcR8_1f704663b82218d083232544521efb00/#run7
-- Snap Slider: https://webpagetest.org/result/211005_AiDc45_c65bca3277cf6443eb84cbd5799adb97/#run8
-- Swiper: https://webpagetest.org/result/211005_AiDcBJ_fc80bd25977b30448300c7201cacac7e/#run9
+- Slick: https://webpagetest.org/result/211005_AiDcR8_1f704663b82218d083232544521efb00/
+- Snap Slider: https://webpagetest.org/result/211005_AiDc45_c65bca3277cf6443eb84cbd5799adb97/
+- Swiper: https://webpagetest.org/result/211005_AiDcBJ_fc80bd25977b30448300c7201cacac7e/
 - Tiny Slider 2: https://webpagetest.org/result/211005_AiDc5Q_62b221a807d8d15fdd8d0d8e68047d68/
 
 ### Largest Contentful Paint
